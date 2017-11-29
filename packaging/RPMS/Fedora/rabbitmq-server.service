@@ -3,7 +3,9 @@ Description=RabbitMQ broker
 After=syslog.target network.target
 
 [Service]
-LimitNOFILE=65536
+# Un-comment this setting if you need to increase RabbitMQ's
+# open files limit
+# LimitNOFILE=16384
 Type=notify
 User=rabbitmq
 Group=rabbitmq
